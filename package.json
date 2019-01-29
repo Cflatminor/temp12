@@ -1,0 +1,14 @@
+{
+  "name": "projj",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "app/js/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Roma",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
