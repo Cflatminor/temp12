@@ -20,7 +20,8 @@ function sync () {
     browserSync.init({
         server: {
             baseDir: "app"
-        }
+        },
+				notify: false
     });
 };
 
@@ -28,5 +29,8 @@ gulp.task ('default', def);
 gulp.task ('sass-compile', sassCompile);
 gulp.task ('browser-sync', sync);
 gulp.task ('watch', function () {
+	sync ();
 	gulp.watch('app/scss/**/*.scss', gulp.series('sass-compile'));
+	gulp.watch('app/*.html').on('change', browserSync.reload);
+	gulp.watch('app/css/*.css').on('change', browserSync.reload);
 });
