@@ -1,7 +1,8 @@
-let gulp = require ('gulp');
+let gulp = require ('gulp'),
+		sass = require ('gulp-sass');
 
-function default () {
-	console.log ('Ready!');
+function def () {
+	return console.log ('Ready!');
 }
 
-gulp.task ('default', default);
+gulp.task ('default', def);
