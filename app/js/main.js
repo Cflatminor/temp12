@@ -1,12 +1,7 @@
-console.log ('hello world!');
-console.log ('first taste');
+// Библиотеки
+// import 'jquery';
+import '../libs/vue/vue.js';
 
-console.log ('second taste');
-
-console.log ('third taste');
-
-function summ (a, b) {
-  return a + b;
-}
-
-console.log (summ (2,2));
+// Основной код
+import './test';
+import './test2';

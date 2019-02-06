@@ -1,6 +1,7 @@
 let gulp = require ('gulp'),
 		sass = require ('gulp-sass'),
-		concat = require('gulp-concat'),
+		concat = require ('gulp-concat'),
+		autoprefixer = require ('gulp-autoprefixer'),
 		browserSync = require ('browser-sync').create();
 
 sass.compiler = require ('node-sass');
@@ -12,12 +13,13 @@ function def () {
 function sassCompile () {
   return gulp.src ('app/scss/**/*.scss')
     .pipe (sass.sync ().on('error', sass.logError))
+		.pipe (autoprefixer (['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
 		.pipe (concat ('main.css'))
     .pipe (gulp.dest ('app/css'));
 };
 
 function concatJs () {
-	return gulp.src (['app/js/test.js', 'app/js/test2.js'])
+	return gulp.src ('app/js/index.js')
 		.pipe (concat ('main.js'))
 		.pipe (gulp.dest ('app/js'));
 };

@@ -6,4 +6,4 @@ function summ (a, b) {
   return a + b;
 }
 
-console.log (summ (2,2));
+console.log (summ (2,2)); 

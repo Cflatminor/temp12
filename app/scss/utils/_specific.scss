@@ -1,9 +1,29 @@
 body {
   line-height: 1.4;
   min-width: 320px;
+  background: #f4f3f2;
+  color: $mainFontColor;
 }
 
-.wrapper {
+.container {
   max-width: 1240px;
   margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.outline {
+  outline: 1px solid black;
 }

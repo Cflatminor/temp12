@@ -1,6 +1,7 @@
 @import 'utils/reset';
+@import 'utils/libs';
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/specific';
 
-body {
-  background: #f4f3f2;
-  color: red;
-}
+@import 'header/main.scss';
