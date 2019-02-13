@@ -120,3 +120,66 @@ let currentScore = function () {
 // console.log (currentScore);
 
 console.log (window.location.href);
+
+function whileFunc (a, b) {
+  while (a <= b) {
+    console.log (a);
+    a += 1;
+  }
+  return;
+};
+
+// whileFunc (1, 5);
+
+const shetchik = function () {
+  for (z = 0; z < 10; z++) {
+    if (z == 6) {
+      console.log ('6');
+      continue;
+    };
+    console.log (z);
+  };
+};
+
+// shetchik ();
+
+function showString (msg) {
+  console.log (typeof arguments[0]);
+  console.log (String(msg));
+}
+
+// showString();
+var someArr = [
+  1, 2, 22, 12, 42, 4
+];
+
+function currentPlayerScore (ar) {
+  var result = 0;
+  for (var i = 0; i < ar.length; i++) {
+    result += ar[i];
+  };
+  return result;
+};
+
+console.log (currentPlayerScore(someArr));
+
+let playerScore = +currentPlayerScore(someArr);
+
+if (playerScore > 21) {
+  console.log ('111');
+}
+
+console.log ('Score is : ' + playerScore);
+
+
+function testz (a, b) {
+  this.a = a,
+  this.b = b;
+  this.aChange = function (a) {
+    this.a = a;
+  }
+}
+
+var myClass = new testz(2, 44);
+myClass.aChange(4);
+console.log (myClass.a);
