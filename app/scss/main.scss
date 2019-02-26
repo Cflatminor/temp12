@@ -6,3 +6,24 @@
 
 @import 'header/main.scss';
 @import 'zombie/main.scss';
+
+.menu {
+  margin: 20px 0;
+  width: 100%;
+  .menu__list {
+    border-bottom: 1px solid black;
+    .list__item {
+      margin-right: 30px;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-color: blue;
+      }
+      .item__link {
+        text-decoration: none;
+        padding: 10px 0;
+        color: #a2c1c3;
+        display: block;
+      }
+    }
+  }
+}

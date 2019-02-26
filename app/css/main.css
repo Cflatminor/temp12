@@ -78,8 +78,18 @@ body {
   .header strong {
     font-size: 24px; }
 
-.zombie {
-  padding: 20px 10px; }
-  .zombie ul li {
-    float: left;
-    margin-right: 20px; }
+.menu {
+  margin: 20px 0;
+  width: 100%; }
+  .menu .menu__list {
+    border-bottom: 1px solid black; }
+    .menu .menu__list .list__item {
+      margin-right: 30px;
+      border-bottom: 2px solid transparent; }
+      .menu .menu__list .list__item:hover {
+        border-color: blue; }
+      .menu .menu__list .list__item .item__link {
+        text-decoration: none;
+        padding: 10px 0;
+        color: #a2c1c3;
+        display: block; }

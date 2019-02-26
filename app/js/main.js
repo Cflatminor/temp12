@@ -1,185 +1,219 @@
-const mainHeader = document.getElementById('header');
-let name = 'vvvv',
-    age = 22;
-
-function createUser (username) {
-  return name = username;
-};
-
-// mainHeader.innerHTML = '<p>hhh!</p> <p>message</p> <p>UserName is : ' + name + '</p>';
-
-let cat = {
-  name: 'Alice',
-  age: 4,
-  sayMeow: function () {
-    return console.log ('meow meow');
-  },
-  eat: function () {
-    return console.log ('nyam nyam');
+class New {
+  constructor(c, d) {
+    this.a = 12;
+    this.b = 22;
+    this.c = c;
+    this.d = d;
+    this.arr = [];
+    this.btn = document.getElementById('clickbtn');
   }
-};
 
-// cat.sayMeow();
-// cat.eat();
-
-createUser('Zombie');
-// console.log (name)
-
-//////////////////////////////////////////
-//////////////////////////////////////////
-//////////////////////////////////////////
-//////////////////////////////////////////
-//////////////////////////////////////////
-
-let player = {
-  name: name,
-  age: age,
-};
-
-let cards = {
-  d2: 2,
-  d3: 3,
-  d4: 4,
-  d5: 5,
-  d6: 6,
-  d7: 7,
-  d8: 8,
-  d9: 9,
-  d10: 10,
-  dJ: 11,
-  dQ: 12,
-  dK: 13,
-  dA: 14,
-  s2: 2,
-  s3: 3,
-  s4: 4,
-  s5: 5,
-  s6: 6,
-  s7: 7,
-  s8: 8,
-  s9: 9,
-  s10: 10,
-  sJ: 11,
-  sQ: 12,
-  sK: 13,
-  sA: 14,
-  h2: 2,
-  h3: 3,
-  h4: 4,
-  h5: 5,
-  h6: 6,
-  h7: 7,
-  h8: 8,
-  h9: 9,
-  h10: 10,
-  hJ: 11,
-  hQ: 12,
-  hK: 13,
-  hA: 14,
-  c2: 2,
-  c3: 3,
-  c4: 4,
-  c5: 5,
-  c6: 6,
-  c7: 7,
-  c8: 8,
-  c9: 9,
-  c10: 10,
-  cJ: 11,
-  cQ: 12,
-  cK: 13,
-  cA: 14
-}
-
-let score = 0;
-let sss = 0;
-// console.log (player.name, player.age);
-
-function scoreCalc () {
-  let result = 0;
-  for (var i = 0; i < arguments.length; i++) {
-    result += arguments[i];
+  push () {
+    this.arr.push(this.a);
+    this.arr.push(this.b);
+    this.arr.push(this.c);
+    this.arr.push(this.d);
+    // console.log(this.arr.length);
   }
-  return result;
+
+  sum () {
+    let result = 0;
+    for (let k = 0; k < this.arr.length; k++) {
+      result += this.arr[k]
+    }
+    return result;
+  };
 };
 
-console.log (scoreCalc(2, 8, 12));
+let Project = new New(15, 32);
+Project.push();
+Project.all = Project.sum();
+// console.log(Project.all);
 
-var randprop = function (obj) {
-  var keys = Object.keys(obj);
-  return obj[keys[ keys.length * Math.random() << 0]];
+// console.log(Project.arr);
+window.aa = Project.all;
+
+// console.log(aa);
+
+Project.btn.addEventListener('click', function(e) {
+  e.preventDefault;
+  console.log(`123`);
+  window.location.href = `123`;
+});
+
+////////////////////////////
+// console.clear();
+////////////////////////////
+
+function innerPtext () {
+  let p = document.getElementById('tezt');
+  p.setAttribute(`text`, `true`);
+  if (p.hasAttribute('text')) {
+    p.innerHTML = 'lalala';
+  };
 };
+innerPtext();
+////////////////////////////
+function inputPlacehold () {
+  // let inpBoRa = +prompt('What is input border radius? (1 - 25 px)', '');
+  let inpBoRa = 8;
 
-// console.log (randprop(cards));
+  let div = document.createElement('div');
+  document.body.appendChild(div);
+  div.classList.add ('container');
+  div.style.marginTop = 10 + 'px';
 
-// console.log (sss);
-let currentScore = function () {
-  return score += sss;
-}
+  let inp = document.createElement('input');
+  div.appendChild(inp);
+  inp.setAttribute('type', 'text');
+  inp.setAttribute('placeholder', 'type message here');
+  inp.style.background = 'lightgray';
+  inp.style.border = '1px solid gray';
+  inp.style.borderRadius = inpBoRa + 'px';
+  inp.style.padding = 5 + 'px';
 
-// console.log (currentScore);
+  let spn = document.createElement('span');
+  div.appendChild(spn);
+  spn.style.marginLeft = 15 + 'px';
 
-console.log (window.location.href);
-
-function whileFunc (a, b) {
-  while (a <= b) {
-    console.log (a);
-    a += 1;
-  }
-  return;
-};
-
-// whileFunc (1, 5);
-
-const shetchik = function () {
-  for (z = 0; z < 10; z++) {
-    if (z == 6) {
-      console.log ('6');
-      continue;
+  inp.addEventListener('keydown', function (e) {
+    if (inp.value.length > 0 && e.keyCode == 13) {
+      spn.innerHTML = inp.value;
     };
-    console.log (z);
-  };
+  });
 };
-
-// shetchik ();
-
-function showString (msg) {
-  console.log (typeof arguments[0]);
-  console.log (String(msg));
-}
-
-// showString();
-var someArr = [
-  1, 2, 22, 12, 42, 4
-];
-
-function currentPlayerScore (ar) {
-  var result = 0;
-  for (var i = 0; i < ar.length; i++) {
-    result += ar[i];
-  };
+inputPlacehold();
+////////////////////////////
+function arraySplit () {
+  let myArr = '11, 4, 52, 12, 24';
+  let arrSplit = myArr.split(', ');
+  let result = 0;
+  for (let i = 0; i < arrSplit.length; i++) {
+    result += +arrSplit[i];
+  }
+  // console.log(arrSplit);
+  // console.log(result);
   return result;
 };
+arraySplit();
+////////////////////////////
+function arrayJoin () {
+  let myArr = [53, 12, 53, 22];
+  let strArr = myArr.join(', ');
+  // console.log(strArr);
+};
+arrayJoin();
+////////////////////////////
+function arrTest1 () {
+  let myArr = [];
+  // Заполнить массив случайными числами от 1 до 25, объеденить в строку;
+  for (let i = 0; i < 7; i++) {
+    myArr.push(Math.round(25*Math.random()));
+  }
+  let myArrStr = myArr.join(', ');
+  // console.log(myArrStr);
+};
+arrTest1();
+////////////////////////////
+let c = 224;
 
-console.log (currentPlayerScore(someArr));
+//////////////////////////////////
+// Разобрать область видимости //
+////////////////////////////////
 
-let playerScore = +currentPlayerScore(someArr);
-
-if (playerScore > 21) {
-  console.log ('111');
-}
-
-console.log ('Score is : ' + playerScore);
-
-
-function testz (a, b) {
-  this.a = a,
+function bugaga (a, b) {
+  this.a = a;
   this.b = b;
-  this.aChange = function (a) {
-    this.a = a;
+  this.c = 12;
+  this.summ = function () {
+    return a + b + c; // this.a + this.b + this.c
   }
 }
 
-var myClass = new testz(2, 44);
-myClass.aChange(4);
-console.log (myClass.a);
+let ttt = new bugaga(10, 20);
+ttt.a = 342;
+// console.log(ttt.summ());
+
+//////////////////////////////////
+//////////////////////////////////
+
+// console.log(require('util').inspect(, { depth: null }));
+
+function createSomeElement () {
+  let myblock = document.createElement('div');
+  document.body.appendChild(myblock);
+  myblock.classList.add ('footer-tipa');
+  let myh = document.createElement('h1');
+  myh.classList.add ('tipa-zagolovok');
+  myblock.appendChild(myh);
+  myh.innerHTML = `He11o wor1d`;
+  myh.style.fontSize = 24 + `px`;
+  myh.style.margin = 30 + `px`;
+  myh.style.color = `#212121`;
+  myh.addEventListener('click', function (event) {
+    myh.style.color = `red`;
+  });
+};
+createSomeElement();
+
+//////////////////////////////////////////
+//////// Методы массивов ////////////////
+////////////////////////////////////////
+
+let newArray = [];
+
+function arrSplit () {
+  this.names = 'name0, name1, name2, name3, name4, name5';
+  this.arr = names.split(', ');
+  for (let i = 0; i < arr.lenght; i++) {
+    console.log(arr[i]);
+  }
+  // console.log(arr);
+};
+arrSplit(); /** @variables names, arr */
+
+function arrJoin () {
+  this.strArr = arr.join('; ')
+  // console.log(this.strArr);
+};
+arrJoin();
+
+function arrDelete () {
+  delete this.arr[3];
+  // console.log(arr);
+};
+arrDelete();
+
+function arrSplice () {
+  // console.log(new Array(4).join('hi '));
+  let someObj = {
+    number: 4,
+    string: '3f2355',
+    bool: true
+  };
+  arr.splice (1, 1, 'name1'); // (delete-start-index, delete-count, add-elems)
+  arr.splice (3, 1, 'name3');
+  let removedElements = arr.splice (0, 1, someObj);
+  // arr.splice (-1, 0, '123'); // (отрицательный index отсчитает с конца)
+  console.log(this.arr);
+  // console.log(this.arr[0].b);
+  // console.log(removedElements);
+};
+arrSplice(); /** @variable obj [0] */
+
+function arrSlice () {
+  let slicedElements = arr.slice(1, 4); // (begin, end(not included))
+  let fullCopy = arr.slice();
+  // console.log(slicedElements); // На исходный массив не влияет
+  // fullCopy.push('123');
+  // console.log(fullCopy);
+};
+arrSlice();
+
+function fillArray (name, amount) {
+  name.length = amount;
+  for (let i = 0; i < name.length; i++) {
+    name[i] = Math.round(50 * Math.random());
+  };
+};
+fillArray (newArray, 5);
