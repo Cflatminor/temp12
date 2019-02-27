@@ -20,7 +20,7 @@ function sassCompile () {
 
 function concatJs () {
 	return gulp.src ('app/js/index.js')
-		.pipe (concat ('main.js'))
+		.pipe (concat ('app.min.js'))
 		.pipe (gulp.dest ('app/js'));
 };
 
@@ -40,8 +40,8 @@ gulp.task ('browser-sync', sync);
 gulp.task ('watch', function () {
 	sync ();
 	gulp.watch('app/scss/**/*.scss', gulp.series('sass-compile'));
-	gulp.watch(['app/js/**/*.js', '!app/js/main.js'], gulp.series('js-concat'));
+	// gulp.watch(['app/js/**/*.js', '!app/js/app.min.js'], gulp.series('js-concat'));
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 	gulp.watch('app/css/*.css').on('change', browserSync.reload);
-	gulp.watch('app/js/main.js').on('change', browserSync.reload);
+	gulp.watch(['app/js/main.js', 'app/js/arrays.js', 'app/js/task.js']).on('change', browserSync.reload);
 });

@@ -27,3 +27,39 @@ body {
 .outline {
   outline: 1px solid black;
 }
+
+.krestik {  // TODO refactor
+  position: relative;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  transition: ease .2s;
+}
+
+.krestik::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 45%;
+  display: block;
+  width: 2px;
+  height: 17px;
+  background: #8c959e;
+  transform: rotate(45deg);
+}
+
+.krestik::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 45%;
+  display: block;
+  width: 2px;
+  height: 17px;
+  background: #8c959e;
+  transform: rotate(-45deg);
+}
+
+.krestik:hover {
+  transform: rotate(90deg);
+}

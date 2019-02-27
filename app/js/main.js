@@ -1,3 +1,7 @@
+/**
+  * @variable myh {object}
+  */
+
 class New {
   constructor(c, d) {
     this.a = 12;
@@ -84,43 +88,11 @@ function inputPlacehold () {
 };
 inputPlacehold();
 ////////////////////////////
-function arraySplit () {
-  let myArr = '11, 4, 52, 12, 24';
-  let arrSplit = myArr.split(', ');
-  let result = 0;
-  for (let i = 0; i < arrSplit.length; i++) {
-    result += +arrSplit[i];
-  }
-  // console.log(arrSplit);
-  // console.log(result);
-  return result;
-};
-arraySplit();
-////////////////////////////
-function arrayJoin () {
-  let myArr = [53, 12, 53, 22];
-  let strArr = myArr.join(', ');
-  // console.log(strArr);
-};
-arrayJoin();
-////////////////////////////
-function arrTest1 () {
-  let myArr = [];
-  // Заполнить массив случайными числами от 1 до 25, объеденить в строку;
-  for (let i = 0; i < 7; i++) {
-    myArr.push(Math.round(25*Math.random()));
-  }
-  let myArrStr = myArr.join(', ');
-  // console.log(myArrStr);
-};
-arrTest1();
-////////////////////////////
-let c = 224;
 
 //////////////////////////////////
 // Разобрать область видимости //
 ////////////////////////////////
-
+let c = 224;
 function bugaga (a, b) {
   this.a = a;
   this.b = b;
@@ -150,70 +122,58 @@ function createSomeElement () {
   myh.style.fontSize = 24 + `px`;
   myh.style.margin = 30 + `px`;
   myh.style.color = `#212121`;
+  myh.style.textAlign = `center`;
+  // myh.style.transition = `transform ease-in-out .3s`;
   myh.addEventListener('click', function (event) {
     myh.style.color = `red`;
   });
+  this.myh = myh;
 };
 createSomeElement();
 
-//////////////////////////////////////////
-//////// Методы массивов ////////////////
-////////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
+////////////////////////////////////
 
-let newArray = [];
+let paragr = document.querySelectorAll('.reversedTextHere');
+let myText = 'Family';
+paragr.forEach (function (v, i) {
+  let myReversedText = myText.split('').reverse().join(' - ');
+  paragr[i].innerHTML = `${myReversedText}`;
+  paragr[i].addEventListener ('click', function (e) {
+    e.preventDefault ();
+    paragr[i].innerHTML = myText.split(' - ').reverse().join('').split('').join(' - ');
+    console.log(e);
+    paragr[i].style.color = 'blue';
+  });
+});
 
-function arrSplit () {
-  this.names = 'name0, name1, name2, name3, name4, name5';
-  this.arr = names.split(', ');
-  for (let i = 0; i < arr.lenght; i++) {
-    console.log(arr[i]);
-  }
-  // console.log(arr);
-};
-arrSplit(); /** @variables names, arr */
+// parallax
+window.addEventListener('mousemove', function (e) {
+  myh.style.transform = `translate(${e.clientX/600}%, ${e.clientY/20}%)`;
+  // myh.style.transition = `ease-in-out .7s`;
+});
 
-function arrJoin () {
-  this.strArr = arr.join('; ')
-  // console.log(this.strArr);
-};
-arrJoin();
-
-function arrDelete () {
-  delete this.arr[3];
-  // console.log(arr);
-};
-arrDelete();
-
-function arrSplice () {
-  // console.log(new Array(4).join('hi '));
-  let someObj = {
-    number: 4,
-    string: '3f2355',
-    bool: true
-  };
-  arr.splice (1, 1, 'name1'); // (delete-start-index, delete-count, add-elems)
-  arr.splice (3, 1, 'name3');
-  let removedElements = arr.splice (0, 1, someObj);
-  // arr.splice (-1, 0, '123'); // (отрицательный index отсчитает с конца)
-  console.log(this.arr);
-  // console.log(this.arr[0].b);
-  // console.log(removedElements);
-};
-arrSplice(); /** @variable obj [0] */
-
-function arrSlice () {
-  let slicedElements = arr.slice(1, 4); // (begin, end(not included))
-  let fullCopy = arr.slice();
-  // console.log(slicedElements); // На исходный массив не влияет
-  // fullCopy.push('123');
-  // console.log(fullCopy);
-};
-arrSlice();
-
-function fillArray (name, amount) {
-  name.length = amount;
-  for (let i = 0; i < name.length; i++) {
-    name[i] = Math.round(50 * Math.random());
-  };
-};
-fillArray (newArray, 5);
+/*****************************/
+/** @TODO {refactor} */
+// let as = {x:2};
+// let myObject = {
+//   a: 5,
+//   b: 10,
+//
+//   methd: function(c) {
+//     this.x = c;
+//   },
+//
+//   anoth: function (c) {
+//     this.z = c;
+//   }
+// };
+//
+// myObject.methd.call(as,21);
+// let test = myObject.methd.bind(as);
+// console.log(test(2123421));
+// myObject.methd(54545);
+// console.log(as);
+// console.log(myObject);
+/*********************************/
