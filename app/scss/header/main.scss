@@ -1,13 +1,45 @@
 .header {
   padding: 40px;
   text-align: center;
-  // color: $textColor;
+  color: $textColor;
   strong {
     font-size: 24px;
   }
 }
 
+.test-transform {
+  opacity: 0;
+
+  p {
+    color: #212121;
+    font-size: 24px;
+  }
+}
+
+.move-in {
+  transform: translateX(-200%);
+  opacity: 0;
+  margin-bottom: 10px;
+}
+
+.animation {
+  &-wrapper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background: orange;
+  }
+
+  &-element {
+    width: 50px;
+    height: 50px;
+    background: black;
+    position: absolute;
+  }
+}
+
 .transforms-block {
+  margin: 20px auto;
   position: relative;
   width: 200px;
   height: 200px;

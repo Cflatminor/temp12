@@ -113,11 +113,38 @@ body {
 
 .header {
   padding: 40px;
-  text-align: center; }
+  text-align: center;
+  color: #B22222; }
   .header strong {
     font-size: 24px; }
 
+.test-transform {
+  opacity: 0; }
+  .test-transform p {
+    color: #212121;
+    font-size: 24px; }
+
+.move-in {
+  -webkit-transform: translateX(-200%);
+      -ms-transform: translateX(-200%);
+          transform: translateX(-200%);
+  opacity: 0;
+  margin-bottom: 10px; }
+
+.animation-wrapper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background: orange; }
+
+.animation-element {
+  width: 50px;
+  height: 50px;
+  background: black;
+  position: absolute; }
+
 .transforms-block {
+  margin: 20px auto;
   position: relative;
   width: 200px;
   height: 200px;
@@ -182,61 +209,3 @@ body {
         padding: 10px 0;
         color: #a2c1c3;
         display: block; }
-
-.header {
-  padding: 40px;
-  text-align: center; }
-  .header strong {
-    font-size: 24px; }
-
-.transforms-block {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  -webkit-transform: rotate(-30deg) skew(25deg);
-      -ms-transform: rotate(-30deg) skew(25deg);
-          transform: rotate(-30deg) skew(25deg); }
-  .transforms-block:hover .transforms-elem:nth-of-type(1) {
-    -webkit-transform: translate(10px, -10px);
-        -ms-transform: translate(10px, -10px);
-            transform: translate(10px, -10px); }
-  .transforms-block:hover .transforms-elem:nth-of-type(2) {
-    -webkit-transform: translate(20px, -20px);
-        -ms-transform: translate(20px, -20px);
-            transform: translate(20px, -20px); }
-  .transforms-block:hover .transforms-elem:nth-of-type(3) {
-    -webkit-transform: translate(30px, -30px);
-        -ms-transform: translate(30px, -30px);
-            transform: translate(30px, -30px); }
-  .transforms-block:hover .transforms-elem:nth-of-type(4) {
-    -webkit-transform: translate(50px, -50px);
-        -ms-transform: translate(50px, -50px);
-            transform: translate(50px, -50px); }
-  .transforms-block .transforms-elem {
-    width: 100%;
-    height: 100%;
-    background: #000;
-    display: block;
-    position: absolute; }
-    .transforms-block .transforms-elem:nth-of-type(1) {
-      -webkit-transition: ease-out .6s;
-      -o-transition: ease-out .6s;
-      transition: ease-out .6s;
-      background: red; }
-    .transforms-block .transforms-elem:nth-of-type(2) {
-      -webkit-transition: ease-out .5s;
-      -o-transition: ease-out .5s;
-      transition: ease-out .5s;
-      background: green; }
-    .transforms-block .transforms-elem:nth-of-type(3) {
-      -webkit-transition: ease-out .4s;
-      -o-transition: ease-out .4s;
-      transition: ease-out .4s;
-      background: blue; }
-    .transforms-block .transforms-elem:nth-of-type(4) {
-      -webkit-transition: ease-in-out .3s;
-      -o-transition: ease-in-out .3s;
-      transition: ease-in-out .3s;
-      background: orange; }
-
-

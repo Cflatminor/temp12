@@ -43,5 +43,9 @@ gulp.task ('watch', function () {
 	// gulp.watch(['app/js/**/*.js', '!app/js/app.min.js'], gulp.series('js-concat'));
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 	gulp.watch('app/css/*.css').on('change', browserSync.reload);
-	gulp.watch(['app/js/main.js', 'app/js/arrays.js', 'app/js/task.js']).on('change', browserSync.reload);
+	gulp.watch(['app/js/main.js',
+							'app/js/arrays.js',
+							'app/js/task.js',
+							'app/js/animation.js'])
+							.on('change', browserSync.reload);
 });
