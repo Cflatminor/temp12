@@ -284,6 +284,8 @@ jQuery.extend( jQuery.easing,
   * cssTransforms: jQuery cssHooks adding a cross browser, animatible transforms
   *
   * Author Bobby Schultz
+  *
+  * https://github.com/puppybits/QTransform/blob/master/example.html
   */
   //
  (function($) {
@@ -922,15 +924,3 @@ window.addEventListener('mousemove', function (e) {
 // console.log(as);
 // console.log(myObject);
 /*********************************/
-
-$('.test-transform') .css('translateX', '-1000%') .animate ({
-  translateX: '0',
-  opacity: 1
-}, {
-  duration: 2000,
-  easing: 'easeInOutExpo',
-  // specialEasing: {},
-  complete: function () {
-    // console.log(`123`);
-  }
-});

@@ -46,6 +46,7 @@ gulp.task ('watch', function () {
 	gulp.watch(['app/js/main.js',
 							'app/js/arrays.js',
 							'app/js/task.js',
+							'app/js/queries.js',
 							'app/js/animation.js'])
 							.on('change', browserSync.reload);
 });

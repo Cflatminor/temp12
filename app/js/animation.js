@@ -40,3 +40,15 @@ $('#movein').animate({
 //     // console.log(`123`);
 //   }
 // });
+
+$('.test-transform') .css('translateX', '-1000%') .animate ({
+  translateX: '0',
+  opacity: 1
+}, {
+  duration: 2000,
+  easing: 'easeInOutExpo',
+  // specialEasing: {},
+  complete: function () {
+    // console.log(`123`);
+  }
+});
