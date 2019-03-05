@@ -110,73 +110,73 @@ window.addEventListener('mousemove', function (e) {
 
 
 
-/**
-  * @variables array {array}
-  * @variables string {string}
-  * @variables joinedArray {string}
-  * @variables slicedArray {array}
-  */
-
-let A = {
-
-  // Variables
-  string: `one, two, three, four, five, six, seven`,
-  array: [],
-  joinedArray: undefined,
-  slicedArray: [],
-
-  // Methods
-  split: function (ar, symbol, length) {
-    ar = this.string.split(symbol, length);
-    this.array = ar
-    return this.array;
-  },
-
-  join: function (symbol) {
-    this.joinedArray = this.array.join(symbol)
-    return this.joinedArray;
-  },
-
-  splice: function (ar, i, d, elems) {
-    ar.splice(i, d, elems);
-    this.array = ar;
-    if (!elems) {
-      ar.shift();
-    }
-    return this.array;
-  },
-
-  slice: function (ar, start, end) {
-    this.slicedArray = ar.slice(start, end);
-    return this.slicedArray;
-  }
-};
-
-window.onload = A.split(A.array, ', ', 6);
-window.onload = A.join(' - ');
-window.onload = A.slice(A.array, 1, 4);
-A.array.push(1, 5, 23, 51, 12, 22);
-A.array.sort();
-let cnctd = A.array.concat();
-cnctd.push(123, 123, 125);
-console.log(cnctd);
-
-let onlyNums = cnctd.filter(function (num) {
-  return typeof(num) === 'number';
-});
-
-onlyNums.sort((a, b) => a - b);
-console.log(onlyNums);
-
-console.log(cnctd);
-
-let maparr = cnctd.map(function (numbers) {
-  return typeof(numbers) === 'number';
-});
-
-let joinedmaparr = maparr.join(', ');
-
-let newj = joinedmaparr.split(', ').reverse().concat();
-console.log(newj);
-console.log(joinedmaparr);
+// /**
+//   * @variables array {array}
+//   * @variables string {string}
+//   * @variables joinedArray {string}
+//   * @variables slicedArray {array}
+//   */
+//
+// let A = {
+//
+//   // Variables
+//   string: `one, two, three, four, five, six, seven`,
+//   array: [],
+//   joinedArray: undefined,
+//   slicedArray: [],
+//
+//   // Methods
+//   split: function (ar, symbol, length) {
+//     ar = this.string.split(symbol, length);
+//     this.array = ar
+//     return this.array;
+//   },
+//
+//   join: function (symbol) {
+//     this.joinedArray = this.array.join(symbol)
+//     return this.joinedArray;
+//   },
+//
+//   splice: function (ar, i, d, elems) {
+//     ar.splice(i, d, elems);
+//     this.array = ar;
+//     if (!elems) {
+//       ar.shift();
+//     }
+//     return this.array;
+//   },
+//
+//   slice: function (ar, start, end) {
+//     this.slicedArray = ar.slice(start, end);
+//     return this.slicedArray;
+//   }
+// };
+//
+// window.onload = A.split(A.array, ', ', 6);
+// window.onload = A.join(' - ');
+// window.onload = A.slice(A.array, 1, 4);
+// A.array.push(1, 5, 23, 51, 12, 22);
+// A.array.sort();
+// let cnctd = A.array.concat();
+// cnctd.push(123, 123, 125);
+// console.log(cnctd);
+//
+// let onlyNums = cnctd.filter(function (num) {
+//   return typeof(num) === 'number';
+// });
+//
+// onlyNums.sort((a, b) => a - b);
+// console.log(onlyNums);
+//
+// console.log(cnctd);
+//
+// let maparr = cnctd.map(function (numbers) {
+//   return typeof(numbers) === 'number';
+// });
+//
+// let joinedmaparr = maparr.join(', ');
+//
+// let newj = joinedmaparr.split(', ').reverse().concat();
+// console.log(newj);
+// console.log(joinedmaparr);
 //

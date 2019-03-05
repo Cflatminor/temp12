@@ -44,6 +44,7 @@ arrTest1();
     * @variable newArray {array}
     * @variable reversedArr {array}
     * @variable someArrObj {object}
+    * @method sumTheArray 
     * -----------------------------
     */
 
@@ -206,3 +207,27 @@ function arrMap () {
   // console.log(arrgsLengths);
 };
 arrMap();
+
+function sumTheArray (ar) {
+  let result = ar.reduce(function (sum, current, i, array) {
+    return sum + current;
+  });
+  return result;
+};
+
+
+
+// console.log(newArray);
+// let msive = newArray.concat ([25, 12, 22, 13, 8]);
+// let mappdStr = msive.join(', ').split(', ');
+// let mappdStrIf = mappdStr.map(function (v, i) {
+//   return v.length > 1;
+// });
+//
+// console.log(mappdStrIf);
+//
+// let falsesLength = mappdStrIf.filter(function (v, i) {
+//   return v == false;
+// });
+// let falses = falsesLength.length;
+// console.log(falses);
