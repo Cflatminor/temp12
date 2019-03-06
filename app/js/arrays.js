@@ -9,14 +9,14 @@ function arraySplit () {
   // console.log(result);
   return result;
 };
-arraySplit();
+// arraySplit();
 ////////////////////////////
 function arrayJoin () {
   let myArr = [53, 12, 53, 22];
   let strArr = myArr.join(', ');
   // console.log(strArr);
 };
-arrayJoin();
+// arrayJoin();
 ////////////////////////////
 function arrTest1 () {
   let myArr = [];
@@ -27,7 +27,7 @@ function arrTest1 () {
   let myArrStr = myArr.join(', ');
   // console.log(myArrStr);
 };
-arrTest1();
+// arrTest1();
 
 
 
@@ -44,7 +44,8 @@ arrTest1();
     * @variable newArray {array}
     * @variable reversedArr {array}
     * @variable someArrObj {object}
-    * @method sumTheArray 
+    * @method fillArray
+    * @method sumTheArray
     * -----------------------------
     */
 
@@ -60,11 +61,11 @@ let someArrObj = {
   }
 };
 
-(function () {
-  // console.log(arr);
-  let my1 = 'arr[0]'.split('').reverse().join('');
-  // console.log(my1);
-})();
+// (function () {
+//   // console.log(arr);
+//   let my1 = 'arr[0]'.split('').reverse().join('');
+//   // console.log(my1);
+// })();
 
 function fillArray (name, amount) {
   name.length = amount;

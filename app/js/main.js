@@ -1,3 +1,12 @@
+/**
+  * @variable myh {object}
+  * @variable ttt {object}
+  * @variable myText {string}
+  * @variable paragr {object}
+  *
+  */
+
+
 function innerPtext () {
   let p = document.getElementById('tezt');
   p.setAttribute(`text`, `true`);
@@ -6,6 +15,7 @@ function innerPtext () {
   };
 };
 innerPtext();
+
 ////////////////////////////
 function inputPlacehold () {
   // let inpBoRa = +prompt('What is input border radius? (1 - 25 px)', '');
@@ -82,6 +92,12 @@ function createSomeElement () {
 };
 createSomeElement();
 
+// parallax
+window.addEventListener('mousemove', function (e) {
+  myh.style.transform = `translate(${e.clientX/600}%, ${e.clientY/20}%)`;
+  // myh.style.transition = `ease-in-out .7s`;
+});
+
 ////////////////////////////////////
 ////////////////////////////////////
 ////////////////////////////////////
@@ -98,17 +114,6 @@ paragr.forEach (function (v, i) {
     paragr[i].style.color = 'blue';
   });
 });
-
-// parallax
-window.addEventListener('mousemove', function (e) {
-  myh.style.transform = `translate(${e.clientX/600}%, ${e.clientY/20}%)`;
-  // myh.style.transition = `ease-in-out .7s`;
-});
-
-
-
-
-
 
 // /**
 //   * @variables array {array}

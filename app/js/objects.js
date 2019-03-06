@@ -1,6 +1,10 @@
 
 /**
   * @variable myh {object}
+  * @variable someUser {object}
+  * @variable aa {number}
+  * @method User {constructor}
+  * @method New {class}
   */
 
 class New {
@@ -166,8 +170,10 @@ lala.createId();
 let someUser = new User ('some', 24);
 someUser.createId();
 
-console.dir(someUser);
-console.log(someUser.defined);
-console.dir(lala);
-console.log(lala.defined);
+// console.dir(someUser);
+// console.log(someUser.defined);
+// console.dir(lala);
+// console.log(lala.defined);
 // someUser.getData();
+
+// console.dir(someUser);
