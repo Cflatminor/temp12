@@ -44,6 +44,7 @@ gulp.task ('watch', function () {
 	gulp.watch('app/*.html').on('change', browserSync.reload);
 	gulp.watch('app/css/*.css').on('change', browserSync.reload);
 	gulp.watch(['app/js/main.js',
+							'app/js/createElements.js',
 							'app/js/arrays.js',
 							'app/js/task.js',
 							'app/js/queries.js',

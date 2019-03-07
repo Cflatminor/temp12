@@ -2,6 +2,7 @@
 /**
   * @variable myh {object}
   * @variable someUser {object}
+  * @variable lala {object}
   * @variable aa {number}
   * @method User {constructor}
   * @method New {class}
@@ -53,7 +54,6 @@ Project.btn.addEventListener('click', function(e) {
 
 
 /*****************************/
-/** @TODO {refactor} */
 // let as = {x:2};
 // let myObject = {
 //   a: 5,// let msive = newArray.concat ([25, 12, 22, 13, 8]);
@@ -118,8 +118,6 @@ Project.btn.addEventListener('click', function(e) {
 
 })();
 
-
-
 function User (name, age) {
   this.name = name;
   this.id = '';
@@ -151,21 +149,6 @@ User.prototype.getData = function () {
 
 let lala = new User ('lala', 24);
 lala.createId();
-
-
-(function () {
-  let someNewArray = arr.map(function (v, i) {
-    return v.length;
-  });
-  let i = 0;
-  while (i < 5) {
-    i++;
-    someNewArray.push(Math.round(Math.random() * 10));
-  };
-  // console.log(someNewArray);
-  // console.log(sumTheArray(someNewArray));
-})();
-
 
 let someUser = new User ('some', 24);
 someUser.createId();

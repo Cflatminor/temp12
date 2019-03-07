@@ -1,3 +1,9 @@
+/**
+  * @variable moveInElement {object}
+  * @method firstAnimation
+  *
+  */
+
 let moveInElement = document.getElementById('movein');
 function firstAnimation () {
   let animationElement = document.getElementById('anim-elem');
@@ -18,7 +24,11 @@ function firstAnimation () {
     } else {
       // moveInElement.style.transform = 'translateX('+(startpos += 1)+')'+'%';
       moveInElement.style.transform = `translateX(${startpos+=1}%)`
-    }
+// parallax
+window.addEventListener('mousemove', function (e) {
+  myh.style.transform = `translate(${e.clientX/600}%, ${e.clientY/20}%)`;
+  // myh.style.transition = `ease-in-out .7s`;
+});    }
   }
 };
 window.onload = firstAnimation();
@@ -51,4 +61,35 @@ $('.test-transform') .css('translateX', '-1000%') .animate ({
   complete: function () {
     // console.log(`123`);
   }
+});
+
+/**
+  * @method Parallax
+  * @params title {string}
+  * @exports {object}
+  *
+  */
+
+
+class Parallax {
+  constructor (title) {
+    this.title = title;
+    this.a = 25;
+    this.b = 35;
+    this.c = 15;
+  }
+
+  sayHello () {
+    return console.log(`hi, ${this.title}!`);
+  }
+}
+
+window.onload = () => {
+  const myNewParallax = new Parallax ('beauty');
+  myNewParallax.sayHello();
+};
+// parallax
+window.addEventListener('mousemove', function (e) {
+  myh.style.transform = `translate(${e.clientX/600}%, ${e.clientY/20}%)`;
+  // myh.style.transition = `ease-in-out .7s`;
 });
