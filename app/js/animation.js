@@ -1,5 +1,5 @@
 /**
-  * @variable moveInElement {object}
+  * @variable moveInElement {Node}
   * @method firstAnimation
   *
   */
@@ -22,13 +22,10 @@ function firstAnimation () {
     if (startpos >= 0) {
       clearInterval (t);
     } else {
-      // moveInElement.style.transform = 'translateX('+(startpos += 1)+')'+'%';
-      moveInElement.style.transform = `translateX(${startpos+=1}%)`
-// parallax
-window.addEventListener('mousemove', function (e) {
-  myh.style.transform = `translate(${e.clientX/600}%, ${e.clientY/20}%)`;
-  // myh.style.transition = `ease-in-out .7s`;
-});    }
+    // moveInElement.style.transform = 'translateX('+(startpos += 1)+')'+'%';
+    moveInElement.style.transform = `translateX(${startpos+=1}%)`
+    // parallax
+    }
   }
 };
 window.onload = firstAnimation();
